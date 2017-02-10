@@ -6,14 +6,18 @@
     "validateUpsert": true
   },
   "properties": {
-    "id": {
-      "type": "number",
-      "id": true,
-      "required": true
-    },
     "name": {
       "type": "string",
       "required": false
+    },
+    "email": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
     },
     "address": {
       "type": "string",
