@@ -45,5 +45,13 @@
   "doctor": {
     "dataSource": "cloudantdb",
     "public": true
+  },
+  "patient": {
+    "dataSource": "cloudantdb",
+    "public": true
+  },
+  "clinic": {
+    "dataSource": "cloudantdb",
+    "public": true
   }
 }
