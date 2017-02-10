@@ -1,144 +1,133 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>HelloTodo</title>
-    <link rel="stylesheet" href="main.css">
-</head>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Login and Registration Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Login and Registration Form" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+        <style>
+        button {
+    background-color: #225581;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
 
-<body>
-<div class="wrapper">
-    <div class="float-right" style="align:center">
-        <a class="mf-btn mf-btn--primary" href="/explorer/#!/Item" target="_blank">View API Reference</a>
-    </div>
-    <header>
-        <h1>HelloTodo</h1>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Login and Registration Form<span> for hospitals</span></h1>
 
-        <p>This simple todo list backend and web app were created using StrongLoop and Bluemix Mobile Services. Follow the onscreen guided experience to get started.</p>
-    </header>
-    <div class="container">
-        <div id="InfoBox">
-            <div class="instr-pane active" id="init">
-                <h4>Getting Started</h4>
+            </header>
+            <section>
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="mysuperscript.php" autocomplete="on">
+                                <h1>Log in</h1>
+                                    <p>
+                                                                        <label for="username" class="uname" data-icon="u" >  Email </label>
+                                                                        <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                                                </p>
+                                                                <p>
+                                                                        <label for="password" class="youpasswd" data-icon="p">  password </label>
+                                                                        <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
+                                                                </p>
 
-                <p class="next">Add a few
-                    items to the list on the right.</p>
-            </div>
+                                <p class="keeplogin">
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
+									<label for="loginkeeping">Keep me logged in</label>
+								</p>
+                                <p class="login button">
+                                    <button type="submit" value="Login" />   Login </button>
+								</p>
+                                <p class="change_link">
+									Not a member yet ?
+									<a href="#toregister" class="to_register">Join us</a>
+								</p>
+                            </form>
+                        </div>
 
-            <div class="instr-pane" id="saveNewItemClicked">
-                <h4>Adding a new item</h4>
+                        <div id="register" class="animate form">
+                            <form  action="spec.html" autocomplete="on"  onsubmit="return myFunction()" method="post">
+                                <h1> Sign up </h1>
+                                <p>
+                                    <label for="usernamesignup" class="uname" data-icon="u"> organization Name</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                </p>
+                                <p>
+                                    <label for="emailsignup" class="youmail" data-icon="e" >Hospital Email</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/>
+                                </p>
+                                <p>
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p>
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
 
-                <p>Well done. Two API calls were required to add that Todo:</p>
-				<span class="api-block">
-					<a href='/explorer/#!/Item/Item_create' target='_blank'>POST</a> - Create and add the new item<br>
-					<code>
-                        <pre>/api/Items</pre>
-                    </code>
-					<a href='/explorer/#!/Item/Item_find' target='_blank'>GET</a> - Retrieve the full list<br>
-					<code>
-                        <pre>/api/Items</pre>
-                    </code><br>
-				</span>
-                <p class="next">Next, try editing an item.</p>
-            </div>
+                                <p class="signin button">
+                                    <tr>
+								 <td><button  id="submitbutton" type="submit" value="Sign up" onclick="passowrd_conf()"  /> Hospital   </button> </td>
+                                    </form>
+                                    <form action="clin-spec.html" autocomplete="on"  onsubmit="return myFunction()" method="post">
+                                 <td><button  id="submitbutton1" type="submit" value="Sign up" onclick="passowrd_conf()"  /> Clinic   </button> </td>
+                                    </tr>
+								</p>
 
-            <div class="instr-pane" id="editButtonClicked">
-                <h4>Accessing an existing item</h4>
-                <p>Good choice. One API call was required to retrieve the Todo information:</p>
-				<span class="api-block">
-					<a href='/explorer/#!/Item/Item_findById' target='_blank'>GET</a> - Single item by ID.<br>
-					<code>
-                        <pre>/api/Items/:id</pre>
-                    </code><br>
-				</span>
-                <p class="next">Next, hit <b>save</b> to store your changes.</p>
-            </div>
+                <script>
+                function myFunction() {
+                    var pass1 = document.getElementById("passwordsignup").value;
+                    var pass2 = document.getElementById("passwordsignup_confirm").value;
+                    var ok = true;
+                    if (pass1 != pass2) {
+                        //alert("Passwords Do not match");
+                        document.getElementById("passwordsignup").style.borderColor = "#E34234";
+                        document.getElementById("passwordsignup_confirm").style.borderColor = "#E34234";
+                        ok = false;
+                        alert("Passwords don't Match!!!");
 
-            <div class="instr-pane" id="saveExistingItemClicked">
-                <h4>Updating an item</h4>
-                <p>Success. Two API calls were required to store your changes:</p>
-				<span class="api-block">
-					<a href='/explorer/#!/Item/Item_prototype_updateAttributes'
-                       target='_blank'>PUT</a> - update item<br>
-					<code>
-                        <pre>/api/Items/:id</pre>
-                    </code>
-					<a href='/explorer/#!/Item/Item_find' target='_blank'>GET</a> - retrieve the full list <br>
-					<code>
-                        <pre>/api/Items</pre>
-                    </code><br>
-				</span>
-                <p class="next">Next, mark an item as completed using the checkbox.</p>
-            </div>
+}
 
-            <div class="instr-pane" id="doneButtonClicked">
-                <h4>Updating an item</h4>
-                <p>Progress! Similarly, two API calls were required to store your changes:</p>
-				<span class="api-block">
-					<a href='/explorer/#!/Item/Item_prototype_updateAttributes'
-                       target='_blank'>PUT</a> - update item<br>
-					<code>
-                        <pre>/api/Items/:id</pre>
-                    </code>
-					<a href='/explorer/#!/Item/Item_find' target='_blank'>GET</a> - retrieve the full list<br>
-					<code>
-                        <pre>/api/Items</pre>
-                    </code><br>
-				</span>
-                <p class="next">Now, try to <b>delete</b> an item.</p>
-            </div>
 
-            <div class="instr-pane" id="deleteButtonClicked">
-                <h4>Deleting an item</h4>
-                <p>An API call was made in an attempt to delete the todo item</p>
-				<span class="api-block">
-					<a href='/explorer/#!/Item/Item_deleteById' target='_blank'>DELETE</a> - remove item<br>
-					<code><pre>/api/Items/:id</pre></code>
-                <p>However request failed since DELETE endpoint is protected by the
-                    <a href="https://www.ng.bluemix.net/docs/services/mobileaccess/index.html" target="_blank">Mobile Client Access</a> service
-                    and can only be accessed by mobile applications instrumented with Mobile Client Access SDK.
-				</span>
 
-                <p class="next">Continue to <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellotodo"
-                                                    target="_blank">iOS HelloTodo sample</a></p>
-                <p class="next">Continue to <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellotodo"
-                                   target="_blank">Android HelloTodo sample</a></p>
-                <p class="next">Learn to create a <a href="https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop"
-                                                     target="_blank">mobile backend</a> with StrongLoop</p>
-                <p class="next">Learn to protect your mobile backend with <a href="https://www.ng.bluemix.net/docs/services/mobileaccess/index.html"
-                                                    target="_blank">Mobile Client Access</a></p>
-            </div>
+                    else {
+                       window.location.href = "index3.html"
+                    }
+                    return ok;
+                  }
+                </script>
+                      <p class="change_link">
+									Already a member ?
+									<a href="#tologin" class="to_register"> Go and log in </a>
+								</p>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <div class="todo-list">
-            <strong>Todo List</strong><br/><br>
-            <form action="" id="new-todo">
-                <input type="text" id="ItemText" placeholder="New todo" style="width: 300px"/>
-                <button type="submit" id="SaveNewItemButton" class="mf-btn mf-btn--primary-alt">Add</button>
-            </form>
-            <table id="ItemsList">
-            </table>
-				<div class="tc"><span id="refresh" class="refresh" style="display: none">Refresh</span></div>
-        </div>
-
-    </div>
-
-    <div class="made-with float-left">
-        <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-hellotodo" target="_blank"><b>iOS sample</b></a> |
-        <a href="https://github.com/ibm-bluemix-mobile-services/bms-samples-android-hellotodo" target="_blank"><b>Android sample</b></a> |
-        <a href="https://github.com/ibm-bluemix-mobile-services/bms-hellotodo-strongloop" target="_blank"><b>Mobile backend sample</b></a>
-    </div>
-    <div class="made-with float-right">
-        Created with <b><a href="http://www.ibm.com/cloud-computing/bluemix/solutions/mobilefirst/">Bluemix Mobile Services</a></b>
-        and <b><a href="https://strongloop.com/">StrongLoop</a></b>
-    </div>
-
-
-</div>
-
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="Facade.js"></script>
-<script src="App.js"></script>
-<script>$(document).ready(App.init);</script>
-
-</body>
+    </body>
 </html>
