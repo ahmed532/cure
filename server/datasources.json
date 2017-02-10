@@ -2,5 +2,13 @@
   "db": {
     "name": "db",
     "connector": "memory"
-  }
+  },
+  "cloudantdb": {
+    "url": "https://276496d7-c49c-4550-88db-2e73b9d820d0-bluemix:bae64e3a93f177f7f56533affc3f23348c03325c31c9bf6189438a9c5d1e16e2@276496d7-c49c-4550-88db-2e73b9d820d0-bluemix.cloudant.com",
+
+    "database": "curedb",
+    "username": "276496d7-c49c-4550-88db-2e73b9d820d0-bluemix",
+    "password": "bae64e3a93f177f7f56533affc3f23348c03325c31c9bf6189438a9c5d1e16e2",
+    "name": "cloudantdb",
+    "connector": "cloudant"   }
 }
