@@ -1,4 +1,5 @@
 {
+<<<<<<< master
     "Params": {
         "DevMode": {
             "Instrumentation": {
@@ -22,4 +23,18 @@
     "Path": "",
     "ServiceId": "com.ibm.cloudoe.orion.client.deploy",
     "Type": "Cloud Foundry"
+=======
+  "ServiceId": "com.ibm.cloudoe.orion.client.deploy",
+  "Params": {
+    "Target": {
+      "Url": "https://api.ng.bluemix.net",
+      "Org": "vy301-efd",
+      "Space": "dev"
+    },
+    "Name": "cure",
+    "Instrumentation": {}
+  },
+  "Path": "",
+  "Type": "Cloud Foundry"
+>>>>>>> eebfc10 Added DB Models
 }

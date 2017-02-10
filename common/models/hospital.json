@@ -1,0 +1,65 @@
+{
+  "name": "hospital",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "address": {
+      "type": "string",
+      "required": false
+    },
+    "phone": {
+      "type": "string",
+      "required": false
+    },
+    "website": {
+      "type": "string",
+      "required": false
+    },
+    "regular_beds": {
+      "type": "number",
+      "required": false
+    },
+    "ICU_beds": {
+      "type": "number",
+      "required": false
+    },
+    "equipment": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    },
+    "specializations": {
+      "type": [
+        "string"
+      ],
+      "required": false
+    },
+    "doctors": {
+      "type": [
+        "object"
+      ],
+      "required": false
+    },
+    "locatoin": {
+      "type": "geopoint",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
