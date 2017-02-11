@@ -32,12 +32,6 @@
     "dataSource": "db",
     "public": false
   },
-  "Item": {
-    "dataSource": "db",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
   "hospital": {
     "dataSource": "cloudantdb",
     "public": true

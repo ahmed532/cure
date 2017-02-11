@@ -1,4 +1,4 @@
-function(){
+(function (){
 
   function Facade(){
 
@@ -7,6 +7,9 @@ function(){
 
     function getAllHospitals(){
       return $.get(HOSPITAL_URL)
+    }
+        function getAllItems(){
+      return $.get(API_URL)
     }
     function getAllDoctors(){
       return $.get(DOCTOR_URL)
@@ -19,12 +22,12 @@ function(){
       return $.get(HOSPITAL_URL + "/" + itemId);
     }
 
-    /*function addNewItem(text, urgency){
+    function addNewItem(text, urgency){
       var item = {
         "text": text,
         "urgency": urgency,
         "isDone": false
-      }*/
+      }
     function addNewHospital(text){
       var item = {
         
@@ -41,8 +44,8 @@ function(){
     function addNewObj(api_url, tmethod, obj){
     	console.log("add new obj was called");
        $.ajax( {
-        url:api_url,
-        method: tmethod,
+        url:'/api/hospitals',
+        method: 'POST',
         contentType: "application/json",
         data: JSON.stringify(obj)
       });
@@ -58,11 +61,11 @@ function(){
       });
     }
 
-    /*function updateItem(id, text, urgency){
+    function updateItem(id, text, urgency){
       var item = {
         "text": text,
         "urgency": urgency
-      }*/
+      }
     function updateItem(id, text){
       var item = {
         "text": text
@@ -102,11 +105,12 @@ function(){
       addNewItem:addNewItem,
       updateItem:updateItem,
       markItemDone: markItemDone,
-      deleteItem:deleteItem
-    }
+      deleteItem:deleteItem,
+      addNewObj:addNewObj
+    };
 
-  }
+  };
 
   window.Facade = new Facade();
 
-}();
+}());

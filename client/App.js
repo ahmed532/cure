@@ -1,18 +1,18 @@
+/*eslint-env node */
 (function () {
 
 	function App() {
 		
-		var BaseUrl = "https://cure.mybluemix.net";
-		var $name = $("#username");
-     var $password = $("#password");
+	var BaseUrl = "https://cure.mybluemix.net";
+	var $name = $("#username");
+    var $password = $("#password");
     var $loginkeeping = $("#loginkeeping");
     var $logbtn = $("#login-btn");
-     var $usernamesignup = $("#usernamesignup");
-     var $emailsignup = $("#emailsignup");
-     var $passwordsignup = $("#passwordsignup");
-     var $submitbutton = $("#submitbutton");
-     var $submitbutton1 = $("#submitbutton1");
-		
+    var $usernamesignup = $("#usernamesignup");
+    var $emailsignup = $("#emailsignup");
+    var $passwordsignup = $("#passwordsignup");
+    var $submitbutton = $("#submitbutton");
+    var $submitbutton1 = $("#submitbutton1");
 
 	$submitbutton.click(savePage1);
 	//$submitbutton1.click(savePage1);
@@ -20,21 +20,28 @@
     //$saveNewItemButton.click(onSaveNewItemButtonClicked);
     //$saveExistingItemButton.click(onSaveExistingItemButtonClicked);
 
-		function init() {
-			Facade.getAllItems().then(populateItemsList);
-		}
-	
-		function savePage1 () {
-			
-			var obj = {
-				"name" : $name.val(),
-				"email": $emailsignup.val(),
-				"password": $passwordsignup.val(),
-			};
-			console.log("save page 1 was called");
-			var HospitalUrl = "/api/hospitals";
-			Facade.addNewObj(HospitalUrl,"POST",obj);
-		}
+		function init() { }
+		   
+	function addNewObj(api_url, tmethod, obj){
+    	console.log("add new obj was called");
+       	$.ajax( {
+        	url:'/api/hospitals',
+        	method: 'POST',
+        	contentType: "application/json",
+        	data: JSON.stringify(obj)
+      	});
+      	return false;
+    }
+	function savePage1 () {	
+		var obj = {
+			"name" : $usernamesignup.val(),
+			"email": $emailsignup.val(),
+			"password": $passwordsignup.val(),
+		};
+		var HospitalUrl = "/api/hospitals";
+		addNewObj(HospitalUrl,"POST",obj);
+	}
+		
 		function onRefreshClick(){
 			$itemsList.css("opacity", "0");
 			refreshItemsList();
@@ -152,6 +159,6 @@
 
 	window.App = new App();
 
-}();
+}());
 
 

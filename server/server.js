@@ -1,3 +1,4 @@
+/*eslint-env node */
 var packageVersion = require('./../package.json').version;
 console.log("packageVersion :: " + packageVersion);
 

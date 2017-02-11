@@ -15,7 +15,8 @@
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/style2.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
-		<script src="App.js" type="text/javascript" ></script>
+
+		
         <style>
         button {
     background-color: #225581;
@@ -41,9 +42,9 @@
                     <a class="hiddenanchor" id="toregister"></a>
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
-                        <div id="login" class="animate form">
-                             <form autocomplete="on" >
-                                <h1>Log in</h1>
+                         <div id="login" class="animate form">
+                            <form  action="mysuperscript.php" autocomplete="on">
+                             <h1>Log in</h1>
                                     <p>
                                                                         <label for="username" class="uname" data-icon="u" >  Email </label>
                                                                         <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
@@ -68,7 +69,8 @@
                         </div>
 
                         <div id="register" class="animate form">
-                            <form autocomplete="on" >
+                                                       <form  autocomplete="on"  >
+                                
                                 <h1> Sign up </h1>
                                 <p>
                                     <label for="usernamesignup" class="uname" data-icon="u"> organization Name</label>
@@ -89,10 +91,10 @@
 
                                 <p class="signin button">
                                     <tr>
-								 <td><button  id="submitbutton" type="submit" value="Sign up"   /> Hospital   </button> </td>
-                                    </form>
-                                    <form autocomplete="on"   method="post">
-                                 <td><button  id="submitbutton1" type="submit" value="Sign up"  /> Clinic   </button> </td>
+								 <td><a href="spec.html"><button  id="submitbutton" type="button" value="Sign up"   /> Hospital   </button></a> </td>
+                                   </form>
+                                    <form autocomplete="on"  >
+                                <td><button  id="submitbutton1" type="button" value="Sign up"  /> Clinic   </button> </td>
                                     </tr>
 								</p>
 
@@ -130,5 +132,9 @@
                 </div>
             </section>
         </div>
+        		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="Facade.js"></script>
+<script src="App.js"></script>
+<script>$(document).ready(App.init);</script>
     </body>
 </html>
